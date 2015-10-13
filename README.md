@@ -2,13 +2,12 @@
 
 # CollegeSeatAllocation
 
-CollegeSeatAllocation is a _short description_. It is built with [Python][0] using the [Django Web Framework][1].
+CollegeSeatAllocation is a project that automates Seat Allocation Procedure in Colleges. It is built with [Python][0] using the [Django Web Framework][1].
 
 This project has the following basic apps:
 
-* App1 (short desc)
-* App2 (short desc)
-* App3 (short desc)
+* Accounts (Handles accounts - SignUp,SignIn etc.)
+* Profiles (Handles User Profiles)
 
 ## Installation
 
