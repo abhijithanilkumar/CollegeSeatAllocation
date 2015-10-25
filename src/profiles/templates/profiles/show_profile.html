@@ -46,7 +46,16 @@
 	    <span class="sr-only">Permalink</span></a> {{ show_user.profile.get_absolute_url }}
 	</div>
         <div class="panel-body">
-	  <strong>Bio</strong>: {{ show_user.profile.bio }}
+      {% if show_user.is_staff %}
+        <a href="{% url 'seats:allot_seats' %}" class="btn btn-info">Allot Seats</a>  
+      {% else %}
+      <strong>Rank </strong>: {{ show_user.profile.rank }}<br>
+      <strong>Preference 1 </strong>: {{ show_user.profile.pref1 }}<br>
+      <strong>Preference 2 </strong>: {{ show_user.profile.pref2 }}<br>
+      <strong>Preference 3 </strong>: {{ show_user.profile.pref3 }}<br>
+      <strong>Allotted </strong>: {{ show_user.profile.allotted }}<br>
+      <strong>Allotted Preference No </strong>: {{ show_user.profile.allotted_pref }}<br>
+      {% endif %}
 	</div>
       </div>
     </div>
